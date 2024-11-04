@@ -26,7 +26,7 @@
 							<ul>
 								<li><a href="https://www.linkedin.com/company/north-analytics" class="icon brands fa-linkedin" target="_blank"><span class="label"></span></a></li>
 								<li><a href="https://github.com/North-Developer/custom-templates" class="icon brands fa-github" target="_blank><span class="label"></span></a></li>
-								<li><a href="mailto:admin@northanalytics.ca" class="icon solid fa-envelope" target="_blank><span class="label"></span></a></li>
+								<li><a href="#" onclick="copyEmailToClipboard()" class="icon solid fa-envelope" target="_blank><span class="label"></span></a></li>
 							</ul>
 						</nav>
 					</header>
@@ -42,6 +42,8 @@
 			window.onload = function() { document.body.classList.remove('is-preload'); }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
+			function copyEmailToClipboard() { const email = "example@example.com"; navigator.clipboard.writeText(email).then(() => { alert("Email copied.Use it to reach out!")}).catch(err => { console.error("Failed to copy: ", err);}); }
+			
 		</script>
 	</body>
 </html>
